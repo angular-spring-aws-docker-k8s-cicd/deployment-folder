@@ -12,6 +12,7 @@ spec:
       labels:
         app: orderapp
     spec:
+      hostNetwork: true
       containers:
         - name: orderapp
           image: harigoutham/order-service:latest
