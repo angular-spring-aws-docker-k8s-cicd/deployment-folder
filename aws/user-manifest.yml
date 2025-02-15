@@ -14,6 +14,7 @@ spec:
       labels:
         app: userapp
     spec:
+      hostNetwork: true
       containers:
         - name: userapp
           image: harigoutham/user-service:latest
