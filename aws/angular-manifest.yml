@@ -12,6 +12,7 @@ spec:
       labels:
         app: angularapp
     spec:
+      hostNetwork: true
       containers:
         - name: angular-app-container
           image: harigoutham/food-delivery-app-fe:11
