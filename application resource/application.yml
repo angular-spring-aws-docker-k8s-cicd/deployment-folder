@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: 'git@github.com:HariGoutham/deployment-folder.git'
     path: ./aws
-    targetRevision: HEAD
+    targetRevision: local
     directory:
       recurse: true
   project: default
