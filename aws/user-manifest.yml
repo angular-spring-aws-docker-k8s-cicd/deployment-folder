@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: userapp
-          image: harigoutham/user-service
+          image: harigoutham/user-service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 9093
