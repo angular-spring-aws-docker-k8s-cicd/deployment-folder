@@ -17,7 +17,7 @@ spec:
       hostNetwork: true
       containers:
         - name: restaurantapp
-          image: harigoutham/restaurant-listing-service:15
+          image: harigoutham/restaurant-listing-service:17
           imagePullPolicy: Always
           ports:
             - containerPort: 9091
