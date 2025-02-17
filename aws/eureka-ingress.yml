@@ -10,15 +10,10 @@ spec:
   rules:
     - http:
         paths:
-          - path: /eureka/
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: eureka-service
                 port:
                   number: 8761
-
-         
-
-
-         
