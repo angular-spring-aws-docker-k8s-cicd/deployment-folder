@@ -7,16 +7,4 @@ data:
   foodcataloguedb_url: jdbc:mysql://192.168.137.201:3306/foodcataloguedb
   userdb_url: jdbc:mysql://192.168.137.201:3306/userdb
   orderdb_url: mongodb://192.168.137.201:27017/orderdb
-  eureka_service_address: http://localhost:8761/eureka/
-
-
-  
-  # restaurantdb: restaurantdb
-  # mysql-server: mysql-service    # The name of mysql service
-  # mysql-user-username: root
-  # citizen_database_url: jdbc:mysql://mysql-service:3306/citizendb
-  # foodcataloguedb_url: jdbc:mysql://mysql-service:3306/foodcataloguedb
-  # userdb_url: jdbc:mysql://mysql-service:3306/userdb
-  # foodcataloguedb: foodcataloguedb
-  # userdb: userdb
-  
+  eureka_service_address: http://eureka-0.eureka-service:8761/eureka
