@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: eureka
-          image: harigoutham/eureka-server:1
+          image: harigoutham/eureka-server:2
           imagePullPolicy: Always
           ports:
             - containerPort: 8761
