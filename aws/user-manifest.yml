@@ -17,7 +17,7 @@ spec:
       hostNetwork: true
       containers:
         - name: userapp
-          image: harigoutham/user-service:1
+          image: harigoutham/user-service:2
           imagePullPolicy: Always
           ports:
             - containerPort: 9093
