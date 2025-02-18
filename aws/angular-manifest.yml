@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: angular-app-container
-          image: harigoutham/food-delivery-app-fe:11
+          image: harigoutham/food-delivery-app-fe:12
           imagePullPolicy: Always
           ports:
             - containerPort: 80
