@@ -7,4 +7,4 @@ data:
   foodcataloguedb_url: jdbc:mysql://192.168.137.201:3306/foodcataloguedb
   userdb_url: jdbc:mysql://192.168.137.201:3306/userdb
   orderdb_url: mongodb://192.168.137.201:27017/orderdb
-  eureka_service_address: http://eureka-service.default.svc.cluster.local:8761/eureka/
+  eureka_service_address: http://10.108.252.200:8761/eureka/

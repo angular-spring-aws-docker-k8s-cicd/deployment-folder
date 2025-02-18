@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: foodcatalogueapp
-          image: harigoutham/food-catalogue-service:2
+          image: harigoutham/food-catalogue-service:3
           imagePullPolicy: Always
           ports:
             - containerPort: 9092 #
@@ -37,6 +37,11 @@ spec:
                 configMapKeyRef:
                   name: configmap
                   key: foodcataloguedb_url
+            - name: EUREKA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: configmap
+                  key: eureka_service_address
 
 ---
 
