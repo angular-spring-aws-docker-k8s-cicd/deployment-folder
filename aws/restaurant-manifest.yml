@@ -17,7 +17,7 @@ spec:
       hostNetwork: true
       containers:
         - name: restaurantapp
-          image: harigoutham/restaurant-listing-service:20
+          image: harigoutham/restaurant-listing-service:21
           imagePullPolicy: Always
           ports:
             - containerPort: 9091
@@ -37,6 +37,11 @@ spec:
                 configMapKeyRef:
                   name: configmap
                   key: restaurantdb_url
+            - name: EUREKA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: configmap
+                  key: eureka_service_address
 ---
 apiVersion: v1
 kind: Service

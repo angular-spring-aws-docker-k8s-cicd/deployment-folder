@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: orderapp
-          image: harigoutham/order-service:2
+          image: harigoutham/order-service:3
           imagePullPolicy: Always
           ports:
             - containerPort: 9094
@@ -28,6 +28,11 @@ spec:
                   key: orderdb_url
             - name: SPRING_DATA_MONGODB_DATABASE
               value: "orderdb"
+            - name: EUREKA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: configmap
+                  key: eureka_service_address
 
 ---
 apiVersion: v1

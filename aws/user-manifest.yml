@@ -17,7 +17,7 @@ spec:
       hostNetwork: true
       containers:
         - name: userapp
-          image: harigoutham/user-service:2
+          image: harigoutham/user-service:3
           imagePullPolicy: Always
           ports:
             - containerPort: 9093
@@ -37,6 +37,11 @@ spec:
                 configMapKeyRef:
                   name: configmap
                   key: userdb_url
+            - name: EUREKA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: configmap
+                  key: eureka_service_address
 ---
 apiVersion: v1
 kind: Service
