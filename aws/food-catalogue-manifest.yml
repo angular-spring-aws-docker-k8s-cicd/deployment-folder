@@ -37,7 +37,11 @@ spec:
                 configMapKeyRef:
                   name: configmap
                   key: foodcataloguedb_url
-
+            - name: EUREKA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: configmap
+                  key: eureka_service_address
 ---
 
 apiVersion: v1
