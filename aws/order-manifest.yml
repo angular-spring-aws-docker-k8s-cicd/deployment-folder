@@ -28,7 +28,11 @@ spec:
                   key: orderdb_url
             - name: SPRING_DATA_MONGODB_DATABASE
               value: "orderdb"
-
+            - name: EUREKA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: configmap
+                  key: eureka_service_address
 ---
 apiVersion: v1
 kind: Service
