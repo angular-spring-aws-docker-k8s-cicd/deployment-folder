@@ -13,7 +13,7 @@ spec:
     server: 'https://kubernetes.default.svc'
     namespace: default
   source:
-    repoURL: 'git@https://github.com/angular-spring-aws-docker-k8s-cicd/deployment-folder.git'
+    repoURL: 'git@github.com:angular-spring-aws-docker-k8s-cicd/deployment-folder.git'
     path: ./aws
     targetRevision: HEAD
     directory:
