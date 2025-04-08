@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: myalias=docker.io/harigoutham        
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds           
-    argocd-image-updater.argoproj.io/git-branch: main                                          
+    argocd-image-updater.argoproj.io/git-branch: test_one_app                                          
     argocd-image-updater.argoproj.io/myalias.force-update: "true"
 spec:
   destination:
@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: 'git@github.com:HariGoutham/deployment-folder.git'
     path: ./aws
-    targetRevision: local
+    targetRevision: test_one_app
     directory:
       recurse: true
   project: default
