@@ -23,6 +23,11 @@ spec:
             - containerPort: 9092 #
 
           env: # Environment variables supplied to the Pod
+            - name: EUREKA_URL  # <--- This is the variable name your Spring code expects
+              valueFrom:
+                configMapKeyRef:
+                  name: configmap
+                  key: eureka_service_address
             - name: SPRING_DATASOURCE_USERNAME # Name of the environment variable
               valueFrom: # Get the value of environment variable from kubernetes secrets
                 secretKeyRef:
