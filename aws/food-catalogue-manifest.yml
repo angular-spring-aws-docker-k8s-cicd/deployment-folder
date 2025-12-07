@@ -14,7 +14,6 @@ spec:
       labels:
         app: foodcatalogueapp
     spec:
-      hostNetwork: true
       containers:
         - name: foodcatalogueapp
           image: harigoutham/food-catalogue-service:5
