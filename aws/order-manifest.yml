@@ -15,7 +15,7 @@ spec:
       hostNetwork: true
       containers:
         - name: orderapp
-          image: harigoutham/order-service:latest
+          image: harigoutham/order-service:5
           imagePullPolicy: Always
           ports:
             - containerPort: 9094
