@@ -14,18 +14,26 @@ spec:
       labels:
         app: restaurantapp
     spec:
+      # CRITICAL FIX 1: REMOVE hostNetwork: true 
+      # hostNetwork: true # <--- THIS LINE MUST BE DELETED!
       containers:
         - name: restaurantapp
-          image: harigoutham/restaurant-listing-service:31
+          image: harigoutham/restaurant-listing-service:15
           imagePullPolicy: Always
           ports:
             - containerPort: 9091
           env:
-           - name: EUREKA_URL  # <--- This is the variable name your Spring code expects
+            # FIX 2: Inject the Eureka Service FQDN from the ConfigMap
+            - name: EUREKA_URL
               valueFrom:
                 configMapKeyRef:
                   name: configmap
                   key: eureka_service_address
+            # FIX 3: Tell Eureka to register using the Pod's internal IP
+            - name: EUREKA_INSTANCE_PREFERIPADDRESS
+              value: "true"
+              
+            # Your existing database variables follow:
             - name: SPRING_DATASOURCE_USERNAME
               valueFrom:
                 secretKeyRef:
@@ -41,6 +49,7 @@ spec:
                 configMapKeyRef:
                   name: configmap
                   key: restaurantdb_url
+
 ---
 apiVersion: v1
 kind: Service
@@ -53,4 +62,3 @@ spec:
       targetPort: 9091
   selector:
     app: restaurantapp
- 
