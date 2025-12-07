@@ -18,7 +18,7 @@ spec:
       # hostNetwork: true # <--- THIS LINE MUST BE DELETED!
       containers:
         - name: restaurantapp
-          image: harigoutham/restaurant-listing-service:15
+          image: harigoutham/restaurant-listing-service:31
           imagePullPolicy: Always
           ports:
             - containerPort: 9091
