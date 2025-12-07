@@ -34,6 +34,7 @@ metadata:
   labels:
     app: eureka-service
 spec:
+  clusterIP: None
   ports:
     - protocol: TCP
       port: 8761
