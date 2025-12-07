@@ -28,11 +28,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: configmap
-                  key: eureka_service_address
-            # FIX 3: Tell Eureka to register using the Pod's internal IP
-            - name: EUREKA_INSTANCE_PREFERIPADDRESS
-              value: "true"
-              
+                  key: eureka_service_address              
             # Your existing database variables follow:
             - name: SPRING_DATASOURCE_USERNAME
               valueFrom:
