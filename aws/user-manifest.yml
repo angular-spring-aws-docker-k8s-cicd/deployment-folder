@@ -14,14 +14,18 @@ spec:
       labels:
         app: userapp
     spec:
-      hostNetwork: true
       containers:
         - name: userapp
-          image: harigoutham/user-service:latest
+          image: harigoutham/user-service:5
           imagePullPolicy: Always
           ports:
             - containerPort: 9093
           env:
+            - name: EUREKA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: configmap
+                  key: eureka_service_address
             - name: SPRING_DATASOURCE_USERNAME
               valueFrom:
                 secretKeyRef:
