@@ -15,7 +15,7 @@ spec:
       hostNetwork: true
       containers:
         - name: angular-app-container
-          image: harigoutham/food-delivery-app-fe:11
+          image: harigoutham/food-delivery-app-fe:16
           imagePullPolicy: Always
           ports:
             - containerPort: 80
