@@ -14,7 +14,6 @@ spec:
       labels:
         app: restaurantapp
     spec:
-      hostNetwork: true
       containers:
         - name: restaurantapp
           image: harigoutham/restaurant-listing-service:15
