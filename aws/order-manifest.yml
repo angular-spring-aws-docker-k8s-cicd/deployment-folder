@@ -20,6 +20,11 @@ spec:
           ports:
             - containerPort: 9094
           env:
+            - name: EUREKA_URL  # <--- This is the variable name your Spring code expects
+              valueFrom:
+                configMapKeyRef:
+                  name: configmap
+                  key: eureka_service_address
             - name: JAVA_TOOL_OPTIONS
               value: "-Djdk.tls.client.protocols=TLSv1.2"
             - name: SPRING_DATA_MONGODB_URI
